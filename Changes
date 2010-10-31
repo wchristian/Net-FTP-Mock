@@ -1,4 +1,6 @@
 Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
+
+0.103040  2010-11-01 00:39:38 Europe/Berlin
     - initial release
