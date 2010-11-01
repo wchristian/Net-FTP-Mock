@@ -232,6 +232,8 @@ sub size {
 
 =head1 ACKNOWLEDGEMENTS
 
+Thanks to L<Tr@ffics|http://traffics.de> and especially Jens Muskewitz for granting permission to release this module.
+
 Many thanks to mst and rjbs who fielded my newbie questions in #moose and helped me figure out how to actually create
 the Mock object from Net::FTP's mainspace, as well as how to get the Mock object to masquerade as Net::FTP.
 
