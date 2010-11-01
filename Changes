@@ -2,5 +2,9 @@ Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
 
+0.103050  2010-11-01 10:03:14 Europe/Berlin
+    - bugfix: fixed name of account cache attribute
+	- documentation: added acknowledgement of tr@ffics
+
 0.103040  2010-11-01 00:39:38 Europe/Berlin
     - initial release
