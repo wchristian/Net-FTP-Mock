@@ -64,7 +64,7 @@ has host => ( isa => 'Str', is => 'ro', required => 1, initializer => '_check_ho
 has user => ( isa => 'Str' );
 has pass => ( isa => 'Str' );
 has message => ( isa => 'Str' );
-has account => ( isa => 'HashRef', lazy => 1, builder => '_get_account' );
+has _account => ( isa => 'HashRef', lazy => 1, builder => '_get_account' );
 has root => ( isa => 'Str', lazy => 1, default => sub { $_[0]->_account->{root} } );
 has code => ( isa => 'Int' );
 
