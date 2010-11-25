@@ -8,6 +8,7 @@ package load_test;
 use Test::Most;
 
 use lib '../lib';
+use lib 'lib';
 
 use_ok(
     "Net::FTP::Mock",
