@@ -54,11 +54,16 @@ the code or yell at me. Contributions on github are very welcome.
 
 use Moose;
 use MooseX::HasDefaults::RW;
-use MooseX::ClassAttribute;
 
 use File::Copy 'copy';
 
-class_has servers => ( isa => 'HashRef', is => 'rw', default => sub { {} } );
+{
+    my $servers;
+    sub servers {
+        return $servers if @_ < 2;
+        $servers = $_[1];
+    }
+}
 
 has host => ( isa => 'Str', is => 'ro', required => 1, initializer => '_check_host' );
 has user => ( isa => 'Str' );
