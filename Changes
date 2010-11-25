@@ -2,6 +2,10 @@ Revision history for Perl module {{$dist->name}}
 
 {{$NEXT}}
 
+0.103291  2010-11-25 11:55:14 Europe/Berlin
+	- removed dependency on Variable::Magic so it can install easier on Fedora 7
+	- slightly more detailed test
+
 0.103050  2010-11-01 10:03:14 Europe/Berlin
     - bugfix: fixed name of account cache attribute
 	- documentation: added acknowledgement of tr@ffics
