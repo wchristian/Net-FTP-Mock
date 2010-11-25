@@ -80,6 +80,10 @@ has code => ( isa => 'Int' );
 Factory method that is implanted into Net::FTP's namespace and returns a Net::FTP::Mock object. Should behave exactly
 like Net::FTP's new() behaves.
 
+=head2 servers
+
+Class attribute that stores the servers hashref passed when the module is used.
+
 =cut
 
 sub Net::FTP::new {
