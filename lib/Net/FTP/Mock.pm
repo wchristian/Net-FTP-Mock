@@ -89,7 +89,7 @@ Class attribute that stores the servers hashref passed when the module is used.
 sub Net::FTP::new {
     my ( undef, @args ) = @_;
 
-    my $ftp = Net::FTP::Mock->new( @args );
+    my $ftp = Net::FTP::Mock->new( host => @args );
     return $ftp if !$ftp->message;
 
     $@ = $ftp->message;
@@ -121,11 +121,6 @@ sub isa {
     return 1 if $_[1] eq 'Net::FTP';
     return $_[0]->UNIVERSAL::isa($_[1]);
 }
-
-sub BUILDARGS {
-    my ( $class, $host, @args ) = @_;
-    return { host => $host, @args };
-};
 
 sub _check_host {
     my ( $self, $host, $set_function ) = @_;
