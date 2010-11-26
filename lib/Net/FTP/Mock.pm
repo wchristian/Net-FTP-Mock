@@ -53,7 +53,6 @@ the code or yell at me. Contributions on github are very welcome.
 =cut
 
 use Moose;
-use MooseX::HasDefaults::RW;
 
 use File::Copy 'copy';
 
@@ -66,12 +65,12 @@ use File::Copy 'copy';
 }
 
 has host => ( isa => 'Str', is => 'ro', required => 1, initializer => '_check_host' );
-has user => ( isa => 'Str' );
-has pass => ( isa => 'Str' );
-has message => ( isa => 'Str' );
-has _account => ( isa => 'HashRef', lazy => 1, builder => '_get_account' );
-has root => ( isa => 'Str', lazy => 1, default => sub { $_[0]->_account->{root} } );
-has code => ( isa => 'Int' );
+has user => ( is => 'rw', isa => 'Str' );
+has pass => ( is => 'rw', isa => 'Str' );
+has message => ( is => 'rw', isa => 'Str' );
+has _account => ( is => 'rw', isa => 'HashRef', lazy => 1, builder => '_get_account' );
+has root => ( is => 'rw', isa => 'Str', lazy => 1, default => sub { $_[0]->_account->{root} } );
+has code => ( is => 'rw', isa => 'Int' );
 
 =head1 METHODS
 
